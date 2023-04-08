@@ -12,6 +12,7 @@ public class Deck {
 	}
 
 	private List<Card> createDeck() {
+		deckOfCards = new ArrayList<Card>();
 		for (Suit s : Suit.values()) {
 			for (Rank r : Rank.values()) {
 				deckOfCards.add(new Card(s, r));
@@ -34,11 +35,6 @@ public class Deck {
 		Collections.shuffle(deckOfCards);
 	}
 	
-
-	public void setDeckOfCards(List<Card> deckOfCards) {
-		this.deckOfCards = deckOfCards;
-	}
-	
 	public int checkSize() {
 		int cardsLeft = deckOfCards.size();
 		
@@ -46,6 +42,11 @@ public class Deck {
 		return cardsLeft; 
 	}
 	
+	public void printCards() {
+		for (Card cards : deckOfCards) {
+			System.out.println(cards);
+		}
+	}
 	
 	
 	

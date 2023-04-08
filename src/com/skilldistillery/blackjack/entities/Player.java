@@ -3,11 +3,12 @@ package com.skilldistillery.blackjack.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dealer extends Hand {
+public class Player extends Hand {
+	
 
 	@Override
 	public void Hand() {
-		System.out.println("Dealer: " + getHandValue());
+		System.out.println("Player: " + getHandValue());
 		showHand();
 		super.Hand();
 	}
@@ -32,15 +33,10 @@ public class Dealer extends Hand {
 
 	@Override
 	public void showHand() {
-		// TODO Auto-generated method stub
+		for(Card cards : hand) {
+			System.out.print(cards + " ");
+		}
 		super.showHand();
 	}
-
-	@Override
-	public void dealerInitialDeal() {
-		// TODO Auto-generated method stub
-		super.dealerInitialDeal();
-	}
-	
 
 }

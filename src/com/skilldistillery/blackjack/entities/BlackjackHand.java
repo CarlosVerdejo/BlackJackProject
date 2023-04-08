@@ -3,46 +3,62 @@ package com.skilldistillery.blackjack.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlackjackHand extends Hand {
+public class BlackJackHand extends Hand {
 
- 
-
-	public boolean isBust() {
-		//IF THE HAND IS > THAN 21(TRUE)
-		if() {
-			return true;
-		}else {
-		return false;
+	
+	public void isBust() {
+			System.out.println("Bust!");
+		
+		
+	}
+	
+	public void isBlackJack() {
+			System.out.println("Black Jack!");
+		
+		
+	}
+	
+	public void qualifyHand(BlackJackHand hand) {
+		if(hand.getHandValue() > 21) {
+			System.out.println("Bust!!");
+		} else if (hand.getHandValue() == 21) {
+			System.out.println("BlackJack");
+			
 		}
 	}
 	
-	
-	
-	
+
 	@Override
-	void Hand() {
-		
-		System.out.println();
-		
+	public void Hand() {
+		super.Hand();
 	}
 
 	@Override
-	void addCard() {
-		// TODO Auto-generated method stub
-		
+	public void addCard(Card deal) {
+		super.addCard(deal);
 	}
 
 	@Override
-	void clearHand() {
-		// TODO Auto-generated method stub
-		
+	public void clearHand() {
+		super.clearHand();
 	}
 
 	@Override
-	void getHandValue() {
-		// TODO Auto-generated method stub
-		
+	public int getHandValue() {
+		return super.getHandValue();
 	}
+
+	@Override
+	public void showHand() {
+		super.showHand();
+	}
+
+	@Override
+	public void dealerInitialDeal() {
+		super.dealerInitialDeal();
+	}
+
+
 
 
 }

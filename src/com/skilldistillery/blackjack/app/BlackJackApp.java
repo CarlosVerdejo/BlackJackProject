@@ -69,7 +69,6 @@ public class BlackJackApp {
 							dealer.addCard(dealerHit);
 							dealer.dealerHand();
 						}
-
 						if (dealer.getHandValue() > 21) {
 							System.out.println("\nDealer Bust! Player Wins.");
 							break;

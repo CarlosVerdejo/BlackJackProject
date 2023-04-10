@@ -6,15 +6,16 @@ import java.util.List;
 public class BlackJackHand extends Hand {
 
 	
-	public void isBust() {
-			System.out.println("Bust!");
-		
+	public boolean isBust(BlackJackHand hand) {
+		if (hand.getHandValue() > 21) {
+		}
+		return true;
 		
 	}
 	
-	public void isBlackJack() {
-			System.out.println("Black Jack!");
-		
+	public boolean isBlackJack(BlackJackHand hand) {
+			if (hand.getHandValue() == 21);
+			return true;
 		
 	}
 	
@@ -28,9 +29,18 @@ public class BlackJackHand extends Hand {
 	}
 	
 
+	
+
 	@Override
-	public void Hand() {
-		super.Hand();
+	public void playerHand() {
+		// TODO Auto-generated method stub
+		super.playerHand();
+	}
+
+	@Override
+	public void dealerHand() {
+		// TODO Auto-generated method stub
+		super.dealerHand();
 	}
 
 	@Override

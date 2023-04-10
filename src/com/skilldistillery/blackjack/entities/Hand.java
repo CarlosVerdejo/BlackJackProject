@@ -8,12 +8,16 @@ import javax.swing.plaf.synth.SynthOptionPaneUI;
 public abstract class Hand {
 	public List<Card> hand = new ArrayList<Card>();
 
-	public void Hand() {
-		System.out.println("\n"
-				+ "Player: " + getHandValue());
+	public void playerHand() {
+		System.out.println("\nPlayer: " + getHandValue());
 		showHand();
 		System.out.println();
 		
+	}
+	public void dealerHand() {
+		System.out.println("\nDealer: " + getHandValue());
+		showHand();
+		System.out.println();
 	}
 
 	public void addCard(Card deal) {

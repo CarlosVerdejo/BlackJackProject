@@ -12,8 +12,9 @@ public abstract class Hand {
 		System.out.println("\nPlayer: " + getHandValue());
 		showHand();
 		System.out.println();
-		
+
 	}
+
 	public void dealerHand() {
 		System.out.println("\nDealer: " + getHandValue());
 		showHand();
@@ -26,11 +27,7 @@ public abstract class Hand {
 	}
 
 	public void clearHand() {
-		for (int i = 0; i < hand.size(); i++) {
-			hand.remove(i);
-
-		}
-
+		hand.removeAll(hand);
 	}
 
 	public int getHandValue() {
@@ -39,19 +36,19 @@ public abstract class Hand {
 			SumOfHand = SumOfHand + cards.getValue();
 
 		}
-		 return SumOfHand;
+		return SumOfHand;
 	}
+
 	public void showHand() {
-		for(Card cards : hand) {
-			System.out.print(cards + " ");
+		for (Card cards : hand) {
+			System.out.print("[" + cards + "]" + "   ");
 		}
 
 	}
-	
+
 	public void dealerInitialDeal() {
 		System.out.println("Dealer: " + hand.get(0).getValue());
-		System.out.println(hand.get(0).toString() + " *** Of ****");
+		System.out.println(hand.get(0).toString() + "   [*** Of ****]");
 	}
-
 
 }

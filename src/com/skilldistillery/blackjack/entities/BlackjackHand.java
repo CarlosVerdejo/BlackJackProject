@@ -5,31 +5,19 @@ import java.util.List;
 
 public class BlackJackHand extends Hand {
 
-	
 	public boolean isBust(BlackJackHand hand) {
 		if (hand.getHandValue() > 21) {
 		}
 		return true;
-		
-	}
-	
-	public boolean isBlackJack(BlackJackHand hand) {
-			if (hand.getHandValue() == 21);
-			return true;
-		
-	}
-	
-	public void qualifyHand(BlackJackHand hand) {
-		if(hand.getHandValue() > 21) {
-			System.out.println("Bust!!");
-		} else if (hand.getHandValue() == 21) {
-			System.out.println("BlackJack");
-			
-		}
-	}
-	
 
-	
+	}
+
+	public boolean isBlackJack(BlackJackHand hand) {
+		if (hand.getHandValue() == 21)
+			;
+		return true;
+
+	}
 
 	@Override
 	public void playerHand() {
@@ -67,8 +55,5 @@ public class BlackJackHand extends Hand {
 	public void dealerInitialDeal() {
 		super.dealerInitialDeal();
 	}
-
-
-
 
 }

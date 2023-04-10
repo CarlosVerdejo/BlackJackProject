@@ -48,7 +48,7 @@ public class BlackJackApp {
 			dealer.dealerInitialDeal();
 			player.playerHand();
 
-			while (player.getHandValue() < 22) {
+			while (player.getHandValue() < 23) {
 				if (player.getHandValue() > 21) {
 					System.out.println("\nPlayer Bust! Dealer Wins.");
 					break;
@@ -75,8 +75,6 @@ public class BlackJackApp {
 							break;
 						} else if (dealer.getHandValue() == 21) {
 							System.out.println("\nBlackJack! Dealer Wins");
-						} else if (dealer.getHandValue() > 21) {
-							break;
 						} else if (dealer.getHandValue() >= 17 && dealer.getHandValue() < 21) {
 							break;
 						}

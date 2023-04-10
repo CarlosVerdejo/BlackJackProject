@@ -48,7 +48,7 @@ public abstract class Hand {
 
 	public void dealerInitialDeal() {
 		System.out.println("Dealer: " + hand.get(0).getValue());
-		System.out.println(hand.get(0).toString() + "   [*** Of ****]");
+		System.out.println("[" + hand.get(0).toString() +"]" + "   [*** Of ****]");
 	}
 
 }

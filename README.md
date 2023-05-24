@@ -1,6 +1,6 @@
 # BlackJackProject
 
-#Technologies Used
+#Technologies Used - 
   While Loops
   For Loops
   If Else Statements
